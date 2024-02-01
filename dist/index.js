@@ -4210,8 +4210,8 @@ function run() {
         process.exit(0);
     }
     // console.log(JSON.stringify(args));
-    if (args["_"] && args["_"].length > 0) {
-        console.log(args["_"][0]);
+    if (args._ && args._.length > 0) {
+        console.log(args._[0]);
     }
 }
 exports.run = run;
