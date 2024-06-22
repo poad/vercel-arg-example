@@ -4145,7 +4145,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.run = void 0;
+exports.run = run;
 const fs = __importStar(__nccwpck_require__(147));
 const path_1 = __importDefault(__nccwpck_require__(17));
 const arg_1 = __importDefault(__nccwpck_require__(281));
@@ -4214,7 +4214,6 @@ function run() {
         console.log(args._[0]);
     }
 }
-exports.run = run;
 
 
 /***/ }),
