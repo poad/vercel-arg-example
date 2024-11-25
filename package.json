@@ -23,7 +23,7 @@
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {
-    "@types/node": "^22.9.2",
+    "@types/node": "^22.9.3",
     "@vercel/ncc": "^0.38.3",
     "typescript": "^5.7.2"
   },
