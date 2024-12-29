@@ -9,9 +9,8 @@
   "type": "module",
   "scripts": {
     "package": "ncc build src/index.ts --license licenses.txt -s",
-    "all": "pnpm package",
-    "start": "node -r source-map-support/register --enable-source-maps dist/index.js",
-    "prestart": "pnpm package"
+    "all": "ncc build src/index.ts --license licenses.txt -s",
+    "start": "node -r source-map-support/register --enable-source-maps dist/index.js"
   },
   "keywords": [],
   "author": "",
