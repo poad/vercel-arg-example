@@ -27,6 +27,9 @@ importers:
       '@vercel/ncc':
         specifier: ^0.38.3
         version: 0.38.3
+      pnpm:
+        specifier: ^10.0.0
+        version: 10.0.0
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
@@ -53,6 +56,11 @@ packages:
   chalk@5.4.1:
     resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+
+  pnpm@10.0.0:
+    resolution: {integrity: sha512-uP71SUvT/ky9Ttq9B0XfLuW+PksLiwj6ZDqj5MZwLMwPANaPqKjJhYpzWgAySFpEmQ7SgQUmyHXkFvABsX3xKw==}
+    engines: {node: '>=18.12'}
+    hasBin: true
 
   source-map-support@0.5.21:
     resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==}
@@ -86,6 +94,8 @@ snapshots:
       chalk: 5.4.1
 
   chalk@5.4.1: {}
+
+  pnpm@10.0.0: {}
 
   source-map-support@0.5.21:
     dependencies:
