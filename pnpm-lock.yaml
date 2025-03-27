@@ -22,22 +22,22 @@ importers:
         version: 0.5.21
     devDependencies:
       '@types/node':
-        specifier: ^22.13.13
-        version: 22.13.13
+        specifier: ^22.13.14
+        version: 22.13.14
       '@vercel/ncc':
         specifier: ^0.38.3
         version: 0.38.3
       pnpm:
-        specifier: ^10.6.5
-        version: 10.6.5
+        specifier: ^10.7.0
+        version: 10.7.0
       typescript:
         specifier: ^5.8.2
         version: 5.8.2
 
 packages:
 
-  '@types/node@22.13.13':
-    resolution: {integrity: sha512-ClsL5nMwKaBRwPcCvH8E7+nU4GxHVx1axNvMZTFHMEfNI7oahimt26P5zjVCRrjiIWj6YFXfE1v3dEp94wLcGQ==}
+  '@types/node@22.13.14':
+    resolution: {integrity: sha512-Zs/Ollc1SJ8nKUAgc7ivOEdIBM8JAKgrqqUYi2J997JuKO7/tpQC+WCetQ1sypiKCQWHdvdg9wBNpUPEWZae7w==}
 
   '@vercel/ncc@0.38.3':
     resolution: {integrity: sha512-rnK6hJBS6mwc+Bkab+PGPs9OiS0i/3kdTO+CkI8V0/VrW3vmz7O2Pxjw/owOlmo6PKEIxRSeZKv/kuL9itnpYA==}
@@ -57,8 +57,8 @@ packages:
     resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
-  pnpm@10.6.5:
-    resolution: {integrity: sha512-zfko/KIIMs1Z7FOCZJK33CXcUk1DcLa0rb9lgD0y76psHIgUfArk6NV5psnuxxV1e1DU+jXuoXnYaOraTtBDrw==}
+  pnpm@10.7.0:
+    resolution: {integrity: sha512-a4Za1LYqHZhCth1nSjk5A7hx2SRJVPZSuIQsK1U8chdrJ49kxGPlLUD/+KujhcI1yMns9cx95P14uLttSWM6tg==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -79,7 +79,7 @@ packages:
 
 snapshots:
 
-  '@types/node@22.13.13':
+  '@types/node@22.13.14':
     dependencies:
       undici-types: 6.20.0
 
@@ -95,7 +95,7 @@ snapshots:
 
   chalk@5.4.1: {}
 
-  pnpm@10.6.5: {}
+  pnpm@10.7.0: {}
 
   source-map-support@0.5.21:
     dependencies:
