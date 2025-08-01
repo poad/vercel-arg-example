@@ -28,11 +28,11 @@ importers:
         specifier: ^0.38.3
         version: 0.38.3
       pnpm:
-        specifier: ^10.13.1
-        version: 10.13.1
+        specifier: ^10.14.0
+        version: 10.14.0
       typescript:
-        specifier: ^5.8.3
-        version: 5.8.3
+        specifier: ^5.9.2
+        version: 5.9.2
 
 packages:
 
@@ -57,8 +57,8 @@ packages:
     resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
-  pnpm@10.13.1:
-    resolution: {integrity: sha512-N+vxpcejDV+r4MXfRO6NpMllygxa89urKMOhaBtwolYhjQXIHJwNz3Z+9rhVHrW5YAQrntQwDFkkIzY3fgHPrQ==}
+  pnpm@10.14.0:
+    resolution: {integrity: sha512-rSenlkG0nD5IGhaoBbqnGBegS74Go40X5g4urug/ahRsamiBJfV5LkjdW6MOfaUqXNpMOZK5zPMz+c4iOvhHSA==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -69,8 +69,8 @@ packages:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
 
-  typescript@5.8.3:
-    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+  typescript@5.9.2:
+    resolution: {integrity: sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -95,7 +95,7 @@ snapshots:
 
   chalk@5.4.1: {}
 
-  pnpm@10.13.1: {}
+  pnpm@10.14.0: {}
 
   source-map-support@0.5.21:
     dependencies:
@@ -104,6 +104,6 @@ snapshots:
 
   source-map@0.6.1: {}
 
-  typescript@5.8.3: {}
+  typescript@5.9.2: {}
 
   undici-types@7.8.0: {}
