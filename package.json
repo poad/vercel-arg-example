@@ -24,8 +24,8 @@
   "devDependencies": {
     "@types/node": "^24.3.0",
     "@vercel/ncc": "^0.38.3",
-    "pnpm": "^10.14.0",
+    "pnpm": "^10.15.0",
     "typescript": "^5.9.2"
   },
-  "packageManager": "pnpm@10.14.0"
+  "packageManager": "pnpm@10.15.0"
 }

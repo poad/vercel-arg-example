@@ -4159,7 +4159,7 @@ exports.run = run;
 const fs = __importStar(__nccwpck_require__(896));
 const path_1 = __importDefault(__nccwpck_require__(928));
 const arg_1 = __importDefault(__nccwpck_require__(969));
-const chalk_template_1 = __importDefault(__nccwpck_require__(46));
+const chalk_template_1 = __importDefault(__nccwpck_require__(961));
 __nccwpck_require__(985);
 const argDef = {
     "--help": {
@@ -4242,7 +4242,7 @@ module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("path");
 
 /***/ }),
 
-/***/ 46:
+/***/ 961:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __nccwpck_require__) => {
 
 // ESM COMPAT FLAG
@@ -4258,7 +4258,7 @@ __nccwpck_require__.d(__webpack_exports__, {
   templateStderr: () => (/* binding */ templateStderr)
 });
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/chalk@5.5.0/node_modules/chalk/source/vendor/ansi-styles/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/chalk@5.6.0/node_modules/chalk/source/vendor/ansi-styles/index.js
 const ANSI_BACKGROUND_OFFSET = 10;
 
 const wrapAnsi16 = (offset = 0) => code => `\u001B[${code + offset}m`;
@@ -4489,7 +4489,7 @@ const external_node_process_namespaceObject = __WEBPACK_EXTERNAL_createRequire(i
 const external_node_os_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:os");
 ;// CONCATENATED MODULE: external "node:tty"
 const external_node_tty_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:tty");
-;// CONCATENATED MODULE: ./node_modules/.pnpm/chalk@5.5.0/node_modules/chalk/source/vendor/supports-color/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/chalk@5.6.0/node_modules/chalk/source/vendor/supports-color/index.js
 
 
 
@@ -4631,6 +4631,10 @@ function _supportsColor(haveStream, {streamIsTTY, sniffFlags = true} = {}) {
 		return 3;
 	}
 
+	if (env.TERM === 'wezterm') {
+		return 3;
+	}
+
 	if ('TERM_PROGRAM' in env) {
 		const version = Number.parseInt((env.TERM_PROGRAM_VERSION || '').split('.')[0], 10);
 
@@ -4677,7 +4681,7 @@ const supportsColor = {
 
 /* harmony default export */ const supports_color = (supportsColor);
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/chalk@5.5.0/node_modules/chalk/source/utilities.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/chalk@5.6.0/node_modules/chalk/source/utilities.js
 // TODO: When targeting Node.js 16, use `String.prototype.replaceAll`.
 function stringReplaceAll(string, substring, replacer) {
 	let index = string.indexOf(substring);
@@ -4712,7 +4716,7 @@ function stringEncaseCRLFWithFirstIndex(string, prefix, postfix, index) {
 	return returnValue;
 }
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/chalk@5.5.0/node_modules/chalk/source/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/chalk@5.6.0/node_modules/chalk/source/index.js
 
 
 
