@@ -26,8 +26,8 @@ importers:
         version: 0.5.21
     devDependencies:
       '@types/node':
-        specifier: ^24.6.2
-        version: 24.6.2
+        specifier: ^24.7.0
+        version: 24.7.0
       '@vercel/ncc':
         specifier: ^0.38.4
         version: 0.38.4
@@ -40,8 +40,8 @@ importers:
 
 packages:
 
-  '@types/node@24.6.2':
-    resolution: {integrity: sha512-d2L25Y4j+W3ZlNAeMKcy7yDsK425ibcAOO2t7aPTz6gNMH0z2GThtwENCDc0d/Pw9wgyRqE5Px1wkV7naz8ang==}
+  '@types/node@24.7.0':
+    resolution: {integrity: sha512-IbKooQVqUBrlzWTi79E8Fw78l8k1RNtlDDNWsFZs7XonuQSJ8oNYfEeclhprUldXISRMLzBpILuKgPlIxm+/Yw==}
 
   '@vercel/ncc@0.38.4':
     resolution: {integrity: sha512-8LwjnlP39s08C08J5NstzriPvW1SP8Zfpp1BvC2sI35kPeZnHfxVkCwu4/+Wodgnd60UtT1n8K8zw+Mp7J9JmQ==}
@@ -78,14 +78,14 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  undici-types@7.13.0:
-    resolution: {integrity: sha512-Ov2Rr9Sx+fRgagJ5AX0qvItZG/JKKoBRAVITs1zk7IqZGTJUwgUr7qoYBpWwakpWilTZFM98rG/AFRocu10iIQ==}
+  undici-types@7.14.0:
+    resolution: {integrity: sha512-QQiYxHuyZ9gQUIrmPo3IA+hUl4KYk8uSA7cHrcKd/l3p1OTpZcM0Tbp9x7FAtXdAYhlasd60ncPpgu6ihG6TOA==}
 
 snapshots:
 
-  '@types/node@24.6.2':
+  '@types/node@24.7.0':
     dependencies:
-      undici-types: 7.13.0
+      undici-types: 7.14.0
 
   '@vercel/ncc@0.38.4': {}
 
@@ -110,4 +110,4 @@ snapshots:
 
   typescript@5.9.3: {}
 
-  undici-types@7.13.0: {}
+  undici-types@7.14.0: {}
