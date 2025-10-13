@@ -26,8 +26,8 @@ importers:
         version: 0.5.21
     devDependencies:
       '@types/node':
-        specifier: ^24.7.1
-        version: 24.7.1
+        specifier: ^24.7.2
+        version: 24.7.2
       '@vercel/ncc':
         specifier: ^0.38.4
         version: 0.38.4
@@ -40,8 +40,8 @@ importers:
 
 packages:
 
-  '@types/node@24.7.1':
-    resolution: {integrity: sha512-CmyhGZanP88uuC5GpWU9q+fI61j2SkhO3UGMUdfYRE6Bcy0ccyzn1Rqj9YAB/ZY4kOXmNf0ocah5GtphmLMP6Q==}
+  '@types/node@24.7.2':
+    resolution: {integrity: sha512-/NbVmcGTP+lj5oa4yiYxxeBjRivKQ5Ns1eSZeB99ExsEQ6rX5XYU1Zy/gGxY/ilqtD4Etx9mKyrPxZRetiahhA==}
 
   '@vercel/ncc@0.38.4':
     resolution: {integrity: sha512-8LwjnlP39s08C08J5NstzriPvW1SP8Zfpp1BvC2sI35kPeZnHfxVkCwu4/+Wodgnd60UtT1n8K8zw+Mp7J9JmQ==}
@@ -83,7 +83,7 @@ packages:
 
 snapshots:
 
-  '@types/node@24.7.1':
+  '@types/node@24.7.2':
     dependencies:
       undici-types: 7.14.0
 
