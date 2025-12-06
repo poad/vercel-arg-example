@@ -1052,7 +1052,7 @@ exports.C = ArraySet;
 
 /***/ }),
 
-/***/ 223:
+/***/ 604:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 /* -*- Mode: js; js-indent-level: 2; -*- */
@@ -1612,7 +1612,7 @@ var __webpack_unused_export__;
 var util = __nccwpck_require__(700);
 var binarySearch = __nccwpck_require__(646);
 var ArraySet = (__nccwpck_require__(174)/* .ArraySet */ .C);
-var base64VLQ = __nccwpck_require__(223);
+var base64VLQ = __nccwpck_require__(604);
 var quickSort = (__nccwpck_require__(606)/* .quickSort */ .g);
 
 function SourceMapConsumer(aSourceMap, aSourceMapURL) {
@@ -2761,7 +2761,7 @@ __webpack_unused_export__ = IndexedSourceMapConsumer;
  * http://opensource.org/licenses/BSD-3-Clause
  */
 
-var base64VLQ = __nccwpck_require__(223);
+var base64VLQ = __nccwpck_require__(604);
 var util = __nccwpck_require__(700);
 var ArraySet = (__nccwpck_require__(174)/* .ArraySet */ .C);
 var MappingList = (__nccwpck_require__(541)/* .MappingList */ .P);
@@ -4114,120 +4114,6 @@ exports.SourceMapConsumer = __nccwpck_require__(779).SourceMapConsumer;
 
 /***/ }),
 
-/***/ 353:
-/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
-
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || (function () {
-    var ownKeys = function(o) {
-        ownKeys = Object.getOwnPropertyNames || function (o) {
-            var ar = [];
-            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
-            return ar;
-        };
-        return ownKeys(o);
-    };
-    return function (mod) {
-        if (mod && mod.__esModule) return mod;
-        var result = {};
-        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
-        __setModuleDefault(result, mod);
-        return result;
-    };
-})();
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.run = run;
-const fs = __importStar(__nccwpck_require__(896));
-const path_1 = __importDefault(__nccwpck_require__(928));
-const arg_1 = __importDefault(__nccwpck_require__(988));
-const chalk_template_1 = __importDefault(__nccwpck_require__(372));
-__nccwpck_require__(88);
-const argDef = {
-    "--help": {
-        type: Boolean,
-        alias: "-h",
-    },
-    "--version": {
-        type: Boolean,
-        alias: "-v",
-    },
-    "--flag": {
-        type: String,
-        alias: "-f",
-    },
-};
-const options = Object.keys(argDef)
-    .map((key) => {
-    const target = {};
-    target[key] = argDef[key].type;
-    return target;
-})
-    .reduce((cur, acc) => Object.assign(acc, cur));
-const aliases = Object.keys(argDef)
-    .map((key) => {
-    const target = {};
-    target[argDef[key].alias] = key;
-    return target;
-})
-    .reduce((cur, acc) => Object.assign(acc, cur));
-const argConfig = {
-    // Types
-    ...options,
-    // Aliases
-    ...aliases,
-};
-function run() {
-    const args = (0, arg_1.default)(argConfig, {
-        permissive: true,
-    });
-    const packageJson = JSON.parse(Buffer.from(fs.readFileSync(path_1.default.resolve("package.json"), { flag: "r" })).toString());
-    const helpMessage = (0, chalk_template_1.default) `
-  {bold USAGE}
-
-      {dim $} {bold ${Object.keys(packageJson.bin).pop()}} [--help] --string {underline some-arg} {underline file-path}
-
-  {bold OPTIONS}
-      --help                 Shows this help message
-      --version              Print version of this module
-      --flag {underline flag}          Flag
-  {bold file-path}           File path
-`;
-    if (args["--help"]) {
-        console.error(helpMessage);
-        process.exit(0);
-    }
-    if (args["--version"]) {
-        console.info(packageJson.version);
-        process.exit(0);
-    }
-    // console.log(JSON.stringify(args));
-    if (args._ && args._.length > 0) {
-        console.log(args._[0]);
-    }
-}
-
-
-/***/ }),
-
 /***/ 896:
 /***/ ((module) => {
 
@@ -4240,24 +4126,96 @@ module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("fs");
 
 module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("path");
 
-/***/ }),
+/***/ })
 
-/***/ 372:
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __nccwpck_require__) => {
+/******/ });
+/************************************************************************/
+/******/ // The module cache
+/******/ var __webpack_module_cache__ = {};
+/******/ 
+/******/ // The require function
+/******/ function __nccwpck_require__(moduleId) {
+/******/ 	// Check if module is in cache
+/******/ 	var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 	if (cachedModule !== undefined) {
+/******/ 		return cachedModule.exports;
+/******/ 	}
+/******/ 	// Create a new module (and put it into the cache)
+/******/ 	var module = __webpack_module_cache__[moduleId] = {
+/******/ 		id: moduleId,
+/******/ 		loaded: false,
+/******/ 		exports: {}
+/******/ 	};
+/******/ 
+/******/ 	// Execute the module function
+/******/ 	var threw = true;
+/******/ 	try {
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __nccwpck_require__);
+/******/ 		threw = false;
+/******/ 	} finally {
+/******/ 		if(threw) delete __webpack_module_cache__[moduleId];
+/******/ 	}
+/******/ 
+/******/ 	// Flag the module as loaded
+/******/ 	module.loaded = true;
+/******/ 
+/******/ 	// Return the exports of the module
+/******/ 	return module.exports;
+/******/ }
+/******/ 
+/************************************************************************/
+/******/ /* webpack/runtime/compat get default export */
+/******/ (() => {
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__nccwpck_require__.n = (module) => {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			() => (module['default']) :
+/******/ 			() => (module);
+/******/ 		__nccwpck_require__.d(getter, { a: getter });
+/******/ 		return getter;
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/define property getters */
+/******/ (() => {
+/******/ 	// define getter functions for harmony exports
+/******/ 	__nccwpck_require__.d = (exports, definition) => {
+/******/ 		for(var key in definition) {
+/******/ 			if(__nccwpck_require__.o(definition, key) && !__nccwpck_require__.o(exports, key)) {
+/******/ 				Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 			}
+/******/ 		}
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/hasOwnProperty shorthand */
+/******/ (() => {
+/******/ 	__nccwpck_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/node module decorator */
+/******/ (() => {
+/******/ 	__nccwpck_require__.nmd = (module) => {
+/******/ 		module.paths = [];
+/******/ 		if (!module.children) module.children = [];
+/******/ 		return module;
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/compat */
+/******/ 
+/******/ if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = new URL('.', import.meta.url).pathname.slice(import.meta.url.match(/^file:\/\/\/\w:/) ? 1 : 0, -1) + "/";
+/******/ 
+/************************************************************************/
+var __webpack_exports__ = {};
 
-// ESM COMPAT FLAG
-__nccwpck_require__.r(__webpack_exports__);
-
-// EXPORTS
-__nccwpck_require__.d(__webpack_exports__, {
-  chalkTemplateStderr: () => (/* binding */ chalkTemplateStderr),
-  "default": () => (/* binding */ chalk_template),
-  makeTaggedTemplate: () => (/* binding */ makeTaggedTemplate),
-  makeTemplate: () => (/* binding */ makeTemplate),
-  template: () => (/* binding */ template),
-  templateStderr: () => (/* binding */ templateStderr)
-});
-
+// EXTERNAL MODULE: external "fs"
+var external_fs_ = __nccwpck_require__(896);
+// EXTERNAL MODULE: external "path"
+var external_path_ = __nccwpck_require__(928);
+// EXTERNAL MODULE: ./node_modules/.pnpm/arg@5.0.2/node_modules/arg/index.js
+var arg = __nccwpck_require__(988);
+var arg_default = /*#__PURE__*/__nccwpck_require__.n(arg);
 ;// CONCATENATED MODULE: ./node_modules/.pnpm/chalk@5.6.2/node_modules/chalk/source/vendor/ansi-styles/index.js
 const ANSI_BACKGROUND_OFFSET = 10;
 
@@ -5116,99 +5074,81 @@ const template = makeTemplate(source);
 const templateStderr = makeTemplate(chalkStderr);
 const chalkTemplateStderr = makeChalkTemplate(templateStderr);
 
+// EXTERNAL MODULE: ./node_modules/.pnpm/source-map-support@0.5.21/node_modules/source-map-support/register.js
+var register = __nccwpck_require__(88);
+;// CONCATENATED MODULE: ./src/main.ts
 
-/***/ })
 
-/******/ });
-/************************************************************************/
-/******/ // The module cache
-/******/ var __webpack_module_cache__ = {};
-/******/ 
-/******/ // The require function
-/******/ function __nccwpck_require__(moduleId) {
-/******/ 	// Check if module is in cache
-/******/ 	var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 	if (cachedModule !== undefined) {
-/******/ 		return cachedModule.exports;
-/******/ 	}
-/******/ 	// Create a new module (and put it into the cache)
-/******/ 	var module = __webpack_module_cache__[moduleId] = {
-/******/ 		id: moduleId,
-/******/ 		loaded: false,
-/******/ 		exports: {}
-/******/ 	};
-/******/ 
-/******/ 	// Execute the module function
-/******/ 	var threw = true;
-/******/ 	try {
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __nccwpck_require__);
-/******/ 		threw = false;
-/******/ 	} finally {
-/******/ 		if(threw) delete __webpack_module_cache__[moduleId];
-/******/ 	}
-/******/ 
-/******/ 	// Flag the module as loaded
-/******/ 	module.loaded = true;
-/******/ 
-/******/ 	// Return the exports of the module
-/******/ 	return module.exports;
-/******/ }
-/******/ 
-/************************************************************************/
-/******/ /* webpack/runtime/define property getters */
-/******/ (() => {
-/******/ 	// define getter functions for harmony exports
-/******/ 	__nccwpck_require__.d = (exports, definition) => {
-/******/ 		for(var key in definition) {
-/******/ 			if(__nccwpck_require__.o(definition, key) && !__nccwpck_require__.o(exports, key)) {
-/******/ 				Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 			}
-/******/ 		}
-/******/ 	};
-/******/ })();
-/******/ 
-/******/ /* webpack/runtime/hasOwnProperty shorthand */
-/******/ (() => {
-/******/ 	__nccwpck_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ })();
-/******/ 
-/******/ /* webpack/runtime/make namespace object */
-/******/ (() => {
-/******/ 	// define __esModule on exports
-/******/ 	__nccwpck_require__.r = (exports) => {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/ })();
-/******/ 
-/******/ /* webpack/runtime/node module decorator */
-/******/ (() => {
-/******/ 	__nccwpck_require__.nmd = (module) => {
-/******/ 		module.paths = [];
-/******/ 		if (!module.children) module.children = [];
-/******/ 		return module;
-/******/ 	};
-/******/ })();
-/******/ 
-/******/ /* webpack/runtime/compat */
-/******/ 
-/******/ if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = new URL('.', import.meta.url).pathname.slice(import.meta.url.match(/^file:\/\/\/\w:/) ? 1 : 0, -1) + "/";
-/******/ 
-/************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it uses a non-standard name for the exports (exports).
-(() => {
-var exports = __webpack_exports__;
 
-Object.defineProperty(exports, "B", ({ value: true }));
-const main_1 = __nccwpck_require__(353);
-(0, main_1.run)();
 
-})();
 
-var __webpack_exports___esModule = __webpack_exports__.B;
-export { __webpack_exports___esModule as __esModule };
+const argDef = {
+    "--help": {
+        type: Boolean,
+        alias: "-h",
+    },
+    "--version": {
+        type: Boolean,
+        alias: "-v",
+    },
+    "--flag": {
+        type: String,
+        alias: "-f",
+    },
+};
+const options = Object.keys(argDef)
+    .map((key) => {
+    const target = {};
+    target[key] = argDef[key].type;
+    return target;
+})
+    .reduce((cur, acc) => Object.assign(acc, cur));
+const aliases = Object.keys(argDef)
+    .map((key) => {
+    const target = {};
+    target[argDef[key].alias] = key;
+    return target;
+})
+    .reduce((cur, acc) => Object.assign(acc, cur));
+const argConfig = {
+    // Types
+    ...options,
+    // Aliases
+    ...aliases,
+};
+function run() {
+    const args = arg_default()(argConfig, {
+        permissive: true,
+    });
+    const packageJson = JSON.parse(Buffer.from(external_fs_.readFileSync(__nccwpck_require__.ab + "package.json", { flag: "r" })).toString());
+    const helpMessage = chalk_template `
+  {bold USAGE}
+
+      {dim $} {bold ${Object.keys(packageJson.bin).pop()}} [--help] --string {underline some-arg} {underline file-path}
+
+  {bold OPTIONS}
+      --help                 Shows this help message
+      --version              Print version of this module
+      --flag {underline flag}          Flag
+  {bold file-path}           File path
+`;
+    if (args["--help"]) {
+        console.error(helpMessage);
+        process.exit(0);
+    }
+    if (args["--version"]) {
+        console.info(packageJson.version);
+        process.exit(0);
+    }
+    // console.log(JSON.stringify(args));
+    if (args._ && args._.length > 0) {
+        console.log(args._[0]);
+    }
+}
+
+;// CONCATENATED MODULE: ./src/index.ts
+
+run();
+
 
 //# sourceMappingURL=index.js.map
