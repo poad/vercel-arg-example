@@ -32,8 +32,8 @@ importers:
         specifier: ^0.38.4
         version: 0.38.4
       pnpm:
-        specifier: ^10.26.1
-        version: 10.26.1
+        specifier: ^10.26.2
+        version: 10.26.2
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -61,8 +61,8 @@ packages:
     resolution: {integrity: sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
-  pnpm@10.26.1:
-    resolution: {integrity: sha512-ZkB0q8Nn0skyT9wYA3CXzgqPEmA0Fg9wmSjp6fldmHFDRwROXDFk1lvV2mxZxr42KxB1Rikqjuy3mZGW5c5Y+g==}
+  pnpm@10.26.2:
+    resolution: {integrity: sha512-DjCP8gBfx0EDZvFU9iX2YxqysWsdLnAjhETdaunWMKhILZKkURRN68SSQWiW7Rb3sRSobsaLhASyRDhp5o/9pg==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -99,7 +99,7 @@ snapshots:
 
   chalk@5.6.2: {}
 
-  pnpm@10.26.1: {}
+  pnpm@10.26.2: {}
 
   source-map-support@0.5.21:
     dependencies:
