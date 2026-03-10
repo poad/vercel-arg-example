@@ -54,22 +54,19 @@ importers:
         version: 0.5.21
     devDependencies:
       '@types/node':
-        specifier: ^25.3.5
-        version: 25.3.5
+        specifier: ^25.4.0
+        version: 25.4.0
       '@vercel/ncc':
         specifier: ^0.38.4
         version: 0.38.4
       pnpm:
-        specifier: ^10.31.0
-        version: 10.31.0
+        specifier: ^10.32.0
+        version: 10.32.0
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
 
 packages:
-
-  '@types/node@25.3.5':
-    resolution: {integrity: sha512-oX8xrhvpiyRCQkG1MFchB09f+cXftgIXb3a7UUa4Y3wpmZPw5tyZGTLWhlESOLq1Rq6oDlc8npVU2/9xiCuXMA==}
 
   '@types/node@25.4.0':
     resolution: {integrity: sha512-9wLpoeWuBlcbBpOY3XmzSTG3oscB6xjBEEtn+pYXTfhyXhIxC5FsBer2KTopBlvKEiW9l13po9fq+SJY/5lkhw==}
@@ -91,11 +88,6 @@ packages:
   chalk@5.6.2:
     resolution: {integrity: sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
-
-  pnpm@10.31.0:
-    resolution: {integrity: sha512-45JziL+qgHjOt5t0j/wegnToTXUWPme8IuBsDTrtQ90VMVHL8R1/gwH/SsuYxovcXK32mJUygB/6/js+SmPCaA==}
-    engines: {node: '>=18.12'}
-    hasBin: true
 
   pnpm@10.32.0:
     resolution: {integrity: sha512-myY0uz/tVgHDNjPy2SWT9QYnCjljuMUdKy1qgo2mFc5One6++WFMzrvBOsjTwPnJzM61g8achXhDb6R327INcA==}
@@ -119,10 +111,6 @@ packages:
 
 snapshots:
 
-  '@types/node@25.3.5':
-    dependencies:
-      undici-types: 7.18.2
-
   '@types/node@25.4.0':
     dependencies:
       undici-types: 7.18.2
@@ -138,8 +126,6 @@ snapshots:
       chalk: 5.6.2
 
   chalk@5.6.2: {}
-
-  pnpm@10.31.0: {}
 
   pnpm@10.32.0: {}
 
