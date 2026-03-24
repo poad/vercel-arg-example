@@ -4,8 +4,6 @@ import path from "path";
 import arg from "arg";
 import chalkTemplate from "chalk-template";
 
-import "source-map-support/register";
-
 interface ArgsDefinition {
   [key: string]: {
     type: StringConstructor | BooleanConstructor | NumberConstructor;
