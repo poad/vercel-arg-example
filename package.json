@@ -21,9 +21,9 @@
     "chalk-template": "^1.1.2"
   },
   "devDependencies": {
-    "@types/node": "^25.9.1",
+    "@types/node": "^25.9.2",
     "@vercel/ncc": "^0.38.4",
     "typescript": "^6.0.3"
   },
-  "packageManager": "pnpm@11.4.0"
+  "packageManager": "pnpm@11.5.2"
 }
