@@ -7,7 +7,7 @@ updates:
     allow:
       - dependency-type: all
     cooldown:
-      default-days: 3
+      default-days: 7
     rebase-strategy: auto
     assignees:
       - poad
@@ -28,6 +28,9 @@ updates:
     rebase-strategy: auto
     assignees:
       - poad
+    ignore:
+      - dependency-name: typescript
+        versions: ~7.0.0
     groups:
       npm:
         patterns:
