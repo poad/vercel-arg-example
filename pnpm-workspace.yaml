@@ -3,6 +3,6 @@ packages:
 
 minimumReleaseAge: 10080 # 7 days in minutes
 minimumReleaseAgeExclude:
-  - pnpm@11.20.0
+  - pnpm@11.21.0
 
 trustPolicy: no-downgrade
