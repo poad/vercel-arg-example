@@ -2,7 +2,7 @@
 import './sourcemap-register.cjs';import { createRequire as __WEBPACK_EXTERNAL_createRequire } from "module";
 /******/ var __webpack_modules__ = ({
 
-/***/ 732:
+/***/ 392:
 /***/ ((module) => {
 
 const flagSymbol = Symbol('arg flag');
@@ -237,6 +237,9 @@ module.exports = arg;
 /******/ }
 /******/ 
 /************************************************************************/
+/******/ /* webpack/runtime/asset-relocator-loader */
+/******/ if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = decodeURIComponent(new URL('.', import.meta.url).pathname).slice(import.meta.url.match(/^file:\/\/\/\w:/) ? 1 : 0, -1) + "/";
+/******/ 
 /******/ /* webpack/runtime/compat get default export */
 /******/ (() => {
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -266,10 +269,6 @@ module.exports = arg;
 /******/ 	__nccwpck_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ })();
 /******/ 
-/******/ /* webpack/runtime/compat */
-/******/ 
-/******/ if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = new URL('.', import.meta.url).pathname.slice(import.meta.url.match(/^file:\/\/\/\w:/) ? 1 : 0, -1) + "/";
-/******/ 
 /************************************************************************/
 var __webpack_exports__ = {};
 
@@ -278,7 +277,7 @@ const external_fs_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta
 ;// CONCATENATED MODULE: external "path"
 const external_path_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("path");
 // EXTERNAL MODULE: ./node_modules/.pnpm/arg@5.0.2/node_modules/arg/index.js
-var arg = __nccwpck_require__(732);
+var arg = __nccwpck_require__(392);
 var arg_default = /*#__PURE__*/__nccwpck_require__.n(arg);
 ;// CONCATENATED MODULE: ./node_modules/.pnpm/chalk@5.6.2/node_modules/chalk/source/vendor/ansi-styles/index.js
 const ANSI_BACKGROUND_OFFSET = 10;
@@ -948,7 +947,7 @@ const chalkStderr = createChalk({level: stderrColor ? stderrColor.level : 0});
 
 /* harmony default export */ const source = (chalk);
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/chalk-template@1.1.2/node_modules/chalk-template/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/chalk-template@1.1.3/node_modules/chalk-template/index.js
 // eslint-disable-next-line unicorn/import-style
 
 
@@ -968,6 +967,19 @@ const ESCAPES = new Map([
 	['\\', '\\'],
 	['e', '\u001B'],
 	['a', '\u0007'],
+]);
+
+// Style names are resolved against Chalk's own name tables.
+const STYLE_NAMES = new Set([
+	...modifierNames,
+	...foregroundColorNames,
+	...backgroundColorNames,
+	'rgb',
+	'hex',
+	'ansi256',
+	'bgRgb',
+	'bgHex',
+	'bgAnsi256',
 ]);
 
 function chalk_template_unescape(c) {
@@ -1045,7 +1057,8 @@ function parseStyle(style) {
 
 function makeTemplate(chalk) {
 	function buildStyle(styles) {
-		const enabled = {};
+		// Null prototype, so that a `__proto__` style name becomes an ordinary key and is rejected below instead of silently repointing the prototype.
+		const enabled = Object.create(null);
 
 		for (const layer of styles) {
 			for (const style of layer.styles) {
@@ -1059,7 +1072,8 @@ function makeTemplate(chalk) {
 				continue;
 			}
 
-			if (!(styleName in current)) {
+			// Chalk defines its styles on the prototype, so `Object.hasOwn` would reject every style. The set check must come first, so that a prototype member is never touched.
+			if (!STYLE_NAMES.has(styleName) || !(styleName in current)) {
 				throw new Error(`Unknown Chalk style: ${styleName}`);
 			}
 
